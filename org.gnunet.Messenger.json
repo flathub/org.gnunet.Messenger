@@ -35,8 +35,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftp.gnu.org/gnu/recutils/recutils-1.8.tar.gz",
-		  "sha512": "607284f3e0f067c4fbbd239ff93fdadcf0864d45cb7d27c955a79595778cd76531043f6896f00345fc74853c5fd63bd2379deb4f7d26d49cf515ae46a2dd937c"
+		  "url": "https://ftp.gnu.org/gnu/recutils/recutils-1.9.tar.gz",
+		  "sha512": "775b3b8925a4e5c6f04c6376291b966bdc271f172be2bca06b1f02155ecba12d916c22219f85fe0393f7f9f200f3788ab5fa5d522da2b84b2a0c0ec198318809"
 		}
 	  ]
 	},
@@ -57,8 +57,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.18-stable.tar.gz",
-		  "sha512": "0552c5bdd6521a7af4c54f3fe5926e66db71b7b0bc83f9b33a06538f1afa18019a012fa3da562bbcf780dfadb2595aaf35806a77729062087920eb5f844dfd54"
+		  "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz",
+		  "sha512": "17e8638e46d8f6f7d024fe5559eccf2b8baf23e143fadd472a7d29d228b186d86686a5e6920385fe2020729119a5f12f989c3a782afbd05a8db4819bb18666ef"
 		}
 	  ]
 	},
@@ -68,8 +68,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.16.3.tar.gz",
-		  "sha512": "fad8fcdb4b8058f17aef13a6176d8f19ab88d77fc5fcc709a4bbda463b2217ed2342f3e858c634114b9e4cf8651082af19ca1d490b1dce5e4302c421e1f88664"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.0.tar.gz",
+		  "sha512": "4a6a322b9dfd8c001cec058e085401bbbd07641532be14ae8ec2d913f45695e172ca8b7cb8e4cef9a2801999b009196082017bc837f2d9aaf9cc72cb149247ca"
 		}
 	  ]
 	},
@@ -110,8 +110,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-7.1.0-32.tar.xz",
-		  "sha512": "b670c96b4755073caa8537fe4f42015da3ebac7761105273cc04efa6d03f945ca131292e3243fbb2e32159b54820892ade8f338e7bd3826ed7a9819c5feefb23"
+		  "url": "https://download.imagemagick.org/ImageMagick/download/releases/ImageMagick-7.1.0-37.tar.xz",
+		  "sha512": "43f116a3a6bb9794b8c8440c57a537eab29b0dac7b8ace574e3cc1e6d484054557c9e44235eb799b843ef761c6f22d29ef959f6de6b80a45a3898bee4d2f16da"
 		}
 	  ]
 	},
