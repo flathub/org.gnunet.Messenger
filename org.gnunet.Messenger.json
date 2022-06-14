@@ -68,8 +68,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.0.tar.gz",
-		  "sha512": "4a6a322b9dfd8c001cec058e085401bbbd07641532be14ae8ec2d913f45695e172ca8b7cb8e4cef9a2801999b009196082017bc837f2d9aaf9cc72cb149247ca"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.1.tar.gz",
+		  "sha512": "8054e24b72b8bd6377c81f91ae7ea69964a1c712c9848f71b95f1ea4a3424546ae2131dcdd0b32c1f6b74ffdf28975cc7e3a1ed41d0087b2f50752445544b7ad"
 		}
 	  ]
 	},
