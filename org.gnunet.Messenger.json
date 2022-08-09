@@ -72,11 +72,14 @@
     {
 	  "name": "gnunet",
 	  "buildsystem": "autotools",
+	  "config-opts": [
+		"--disable-documentation"
+	  ],
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.2.tar.gz",
-		  "sha512": "e1ef340a242e794660097c3c39821f37d0738fccc092842e03fac1b913c1ff29cf2d5aee8b2eec16adef4b8cf71f55e28e3cf33a0d3bb57450263662af52f735"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.3.tar.gz",
+		  "sha512": "c1f6c65ae28c99791b4d7b62c3cc84239f6f158e3b6a3c2c98a6809e055e5052cc1286e8ecbb8067bd384e59150b27b46528c25fdd49fa79d327a45df5f02d27"
 		}
 	  ]
 	},
@@ -117,8 +120,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://imagemagick.org/archive/ImageMagick-7.1.0-43.tar.xz",
-		  "sha512": "4f9c9625165eabcabc2edd745ad1755309d412591e5a8d383445d05b2bfe2d41df3e711c38be3ae5c8f504c0510452b1aff51e50edc24aa279bb742fb8ddd305"
+		  "url": "https://imagemagick.org/archive/ImageMagick-7.1.0-45.tar.xz",
+		  "sha512": "c5761c5a2b14a0f148bdc3654d8760f396f3d0207324bf9f2861e51d5b1ece1e060649006a1eab4f354ef94c6e35de24643fae7b961b18b86451c04e2b631a59"
 		}
 	  ]
 	},

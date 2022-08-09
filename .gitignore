@@ -1,0 +1,3 @@
+# Ignore directories for testing builds
+.flatpak-builder/
+build-dir/
