@@ -10,7 +10,7 @@
 	"--socket=fallback-x11",
 	"--share=network",
 	"--socket=pulseaudio",
-	"--device=dri",
+	/* --device=dri was redundant */
 
 	/* File access to share files */
 	"--filesystem=xdg-desktop:ro",
@@ -78,8 +78,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.5.tar.gz",
-		  "sha512": "02c6deac7d5008df4a6b2783a954cf7cd2432669ca2d5c872421cb9ee52ebffc3f8302f68535dcb13745751b5f68277a438e4710bd5ac8709ef933d75b2ed70c"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.6.tar.gz",
+		  "sha512": "1cd1793d1e6c689131ef8ada4e41fe6b559c43170ee32fada381c3358c7c815e7837881f546bbd18bee6e7635a34ff1702cd7c59c74e986d154712cc705edbc4"
 		}
 	  ]
 	},
@@ -120,8 +120,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://imagemagick.org/archive/ImageMagick-7.1.0-47.tar.xz",
-		  "sha512": "63accfefb45a45b3ee44c0bbf489646f71716b8e5d113b6d36698a8f32f3fb693cc3f1545502391ad076784afca61383a9bf681909e6df93e6d318482ce9fe31"
+		  "url": "https://imagemagick.org/archive/ImageMagick-7.1.0-51.tar.xz",
+		  "sha512": "c9c81cb7c2affca527eab2367254e3f65786aebcef71eb313db8fbaaeb62db07fee91dceaecaf429b20440493cd0ade2e5d4705260a2176784c4deede85e12bb"
 		}
 	  ]
 	},
