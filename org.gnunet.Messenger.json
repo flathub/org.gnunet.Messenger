@@ -78,23 +78,19 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.17.6.tar.gz",
-		  "sha512": "1cd1793d1e6c689131ef8ada4e41fe6b559c43170ee32fada381c3358c7c815e7837881f546bbd18bee6e7635a34ff1702cd7c59c74e986d154712cc705edbc4"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.18.0.tar.gz",
+		  "sha512": "73813d45b6c54df8db88cec8bdafaf3dc8c9abf419cd5e439b62aba0d3938f83ac4f517a4d11027f1020744808b0156dd6c93e806c30904764f2890b3cb9b022"
 		}
 	  ]
 	},
 	{
 	  "name": "libgnunetchat",
-	  "buildsystem": "simple",
-	  "build-commands": [
-	    "make release",
-		"make INSTALL_DIR='/app/' install"
-	  ],
+	  "buildsystem": "autotools",
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/libgnunetchat-0.1.0.tar.gz",
-		  "sha512": "3839336bfdecdf538b79a6c24ceef6170d221c43f70ce11a43466be1fe2d7a22baf0ab5dd9794baa0964674842516ce2f8378f2b03b378adc2ec318c1e88c277"
+		  "url": "https://ftpmirror.gnu.org/gnunet/libgnunetchat-0.1.1.tar.gz",
+		  "sha512": "3b1f55508f82d447a4bee4890a65efabe138ebb1ebd5a456200daaa1263998faae33fdb1f7dc9974fffc84f8f8ffd1eb4f199d1581bcda4dbcd399d55154c5ce"
 		}
 	  ]
 	},
