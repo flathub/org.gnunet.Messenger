@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnunet.Messenger",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "42",
+  "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
   "command": "messenger-gtk",
   "finish-args": [
@@ -26,7 +26,6 @@
 	"--device=all"
   ],
   "cleanup": [
-    "/bin/Magick*-config",
     "/include",
     "/lib/pkgconfig",
     "/share/aclocal",
@@ -78,19 +77,30 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.18.1.tar.gz",
-		  "sha512": "9a86caebfc18174eb9ad99c6909269cfd96110c7395a2372fe98e9e6d14f15012122b8cec00a7312b307c7ffbd21872a32a61ecfc698c9db1d63dc210e53312e"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.19.3.tar.gz",
+		  "sha512": "0ec7fc4695b015910700ef188b1d7e1c63bf75d300f0eaea9d7e179718da490df3fbaf08a3612cbc2481983cce53c719a13d3fdc67c757d4a33e7eb6f2bc3d06"
+		}
+	  ]
+	},
+	{
+	  "name": "check",
+	  "buildsystem": "autotools",
+	  "sources": [
+		{
+		  "type": "archive",
+		  "url": "https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz",
+		  "sha512": "77fb34348bc1b1517801865afee5064121a245c10685e6bb6b8f743552646a0643cfdf9fd3dfbf9b2297d9430dfdd49616cf7daf41298d2dbd699f10d654a025"
 		}
 	  ]
 	},
 	{
 	  "name": "libgnunetchat",
-	  "buildsystem": "autotools",
+	  "buildsystem": "meson",
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/libgnunetchat-0.1.1.tar.gz",
-		  "sha512": "3b1f55508f82d447a4bee4890a65efabe138ebb1ebd5a456200daaa1263998faae33fdb1f7dc9974fffc84f8f8ffd1eb4f199d1581bcda4dbcd399d55154c5ce"
+		  "url": "https://ftpmirror.gnu.org/gnunet/libgnunetchat-0.1.3.tar.xz",
+		  "sha512": "356ae45ec62bf51dd5a8effb3d40830818fc3d9584a7b810150cb9dff9504fad411df214b0a9ff3ac42b3cfc8b30a9fa802dc962a55a79999729d8a23e56ac68"
 		}
 	  ]
 	},
@@ -102,22 +112,6 @@
 		  "type": "archive",
 		  "url": "https://fukuchi.org/works/qrencode/qrencode-4.1.1.tar.gz",
 		  "sha512": "209bb656ae3f391b03c7b3ceb03e34f7320b0105babf48b619e7a299528b8828449e0e7696f0b5db0d99170a81709d0518e34835229a748701e7df784e58a9ce"
-		}
-	  ]
-	},
-	{
-	  "name": "imagemagick",
-	  "buildsystem": "autotools",
-	  "config-opts": [
-		"--enable-shared=no",
-	    "--enable-static=yes",
-		"--disable-docs"
-	  ],
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://imagemagick.org/archive/ImageMagick-7.1.0-51.tar.xz",
-		  "sha512": "c9c81cb7c2affca527eab2367254e3f65786aebcef71eb313db8fbaaeb62db07fee91dceaecaf429b20440493cd0ade2e5d4705260a2176784c4deede85e12bb"
 		}
 	  ]
 	},
@@ -135,7 +129,8 @@
 		"--with-qt=no",
 		"--with-python=no",
 		"--with-java=no",
-		"--with-dbus=no"
+		"--with-dbus=no",
+		"--without-imagemagick"
 	  ],
 	  "sources": [
 	    {
@@ -146,17 +141,57 @@
 	  ]
 	},
 	{
+	  "name": "gstreamer",
+	  "buildsystem": "meson",
+	  "sources": [
+		{
+		  "type": "archive",
+		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.0.tar.xz",
+		  "sha256": "78d21b5469ac93edafc6d8ceb63bc82f6cbbee94d2f866cca6b9252157ee0a09"
+		}
+	  ]
+	},
+	{
+	  "name": "gst-plugins-base",
+	  "buildsystem": "meson",
+	  "sources": [
+		{
+		  "type": "archive",
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.0.tar.xz",
+		  "sha256": "f53672294f3985d56355c8b1df8f6b49c8c8721106563e19f53be3507ff2229d"
+		}
+	  ]
+	},
+	{
+	  "name": "gst-plugins-good",
+	  "buildsystem": "meson",
+	  "sources": [
+		{
+		  "type": "archive",
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.0.tar.xz",
+		  "sha256": "582e617271e7f314d1a2211e3e3856ae2e4303c8c0d6114e9c4a5ea5719294b0"
+		}
+	  ]
+	},
+	{
+	  "name": "gst-plugins-bad",
+	  "buildsystem": "meson",
+	  "sources": [
+		{
+		  "type": "archive",
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.0.tar.xz",
+		  "sha256": "3c9d9300f5f4fb3e3d36009379d1fb6d9ecd79c1a135df742b8a68417dd663a1"
+		}
+	  ]
+	},
+	{
 	  "name": "messenger-gtk",
-	  "buildsystem": "simple",
-	  "build-commands": [
-	    "make release",
-		"make INSTALL_DIR='/app/' install"
-	  ],
+	  "buildsystem": "meson",
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/messenger-gtk-0.7.0.tar.gz",
-		  "sha512": "9cec8b85f2a0eb4997fc319bc84e6b32ac9f8174332c2bd53469ccdfe36bf855a0d164110b816770e0396a3eb625b25e8bc008f48227b02cc7e22797388eeb8b"
+		  "url": "https://ftpmirror.gnu.org/gnunet/messenger-gtk-0.8.0.tar.xz",
+		  "sha512": "2628ad2f582a16e078427e94171de5a9b325fd74190b43296391ddfe136bad373ab5408af24e804935a07e0e45948432b1db4c177170f121c10170ede7a6133b"
 		}
 	  ]
 	}
