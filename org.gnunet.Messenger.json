@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnunet.Messenger",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "43",
+  "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
   "command": "messenger-gtk",
   "finish-args": [
@@ -77,8 +77,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.19.3.tar.gz",
-		  "sha512": "0ec7fc4695b015910700ef188b1d7e1c63bf75d300f0eaea9d7e179718da490df3fbaf08a3612cbc2481983cce53c719a13d3fdc67c757d4a33e7eb6f2bc3d06"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.19.4.tar.gz",
+		  "sha512": "c994269e009c6a97860e1903e87ab08b6f79a8f5bb7c27261020e90d162f81d908fe42173969331f3cada2086df8a719caa62c46342d59d46a2b2dd2fb71efa1"
 		}
 	  ]
 	},
@@ -135,8 +135,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.tar.gz",
-		  "sha512": "9737f9dca42c29f92aa1eca5c0808da34f1d16c88c65241c9e3984c487e502f398437e7a707a1edd2c440f784db537ba33ea4008a2d1c1caaf5eea6431b1400b"
+		  "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.90.tar.gz",
+		  "sha512": "b6f8ed573614679e511b7e00154b46e8083dd5f57ed1d84ffe6f0b93b240cc7be51005a1d501fd715bd89df6e0eb5c0a03eda971ecde9364d53ceb42c81b4ac1"
 		}
 	  ]
 	},
@@ -146,8 +146,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.0.tar.xz",
-		  "sha256": "78d21b5469ac93edafc6d8ceb63bc82f6cbbee94d2f866cca6b9252157ee0a09"
+		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.1.tar.xz",
+		  "sha256": "cd3ca759f926763615fdfcea63c9761198c42889bc0615ceec73e22b24fde771"
 		}
 	  ]
 	},
@@ -157,8 +157,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.0.tar.xz",
-		  "sha256": "f53672294f3985d56355c8b1df8f6b49c8c8721106563e19f53be3507ff2229d"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.1.tar.xz",
+		  "sha256": "59bcaeacc5646b8dbdcfa4ef20ca6e818dd234910efb4cee1bbea441a3801c69"
 		}
 	  ]
 	},
@@ -168,8 +168,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.0.tar.xz",
-		  "sha256": "582e617271e7f314d1a2211e3e3856ae2e4303c8c0d6114e9c4a5ea5719294b0"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.1.tar.xz",
+		  "sha256": "44f9104654b4fd042aebe90932ab92e7ff7d8460fbc05b23dad87dffe70974cc"
 		}
 	  ]
 	},
@@ -179,8 +179,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.0.tar.xz",
-		  "sha256": "3c9d9300f5f4fb3e3d36009379d1fb6d9ecd79c1a135df742b8a68417dd663a1"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.1.tar.xz",
+		  "sha256": "2f39b6f222d98666f9ff420a00233e336949953a846237c2bfafc8805f509f0e"
 		}
 	  ]
 	},
