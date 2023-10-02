@@ -63,8 +63,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz",
-		  "sha512": "17e8638e46d8f6f7d024fe5559eccf2b8baf23e143fadd472a7d29d228b186d86686a5e6920385fe2020729119a5f12f989c3a782afbd05a8db4819bb18666ef"
+		  "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.19.tar.gz",
+		  "sha512": "8e9b6d796f6330e00921ce37f1b43545966094250938626ae227deef5fd1279f2fc18b5cd55e23484732a27df4d919cf0d2f07b9c2f1aa0c0ef689e668b0d439"
 		}
 	  ]
 	},
@@ -77,8 +77,8 @@
 	  "sources": [
 	    {
 		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.19.4.tar.gz",
-		  "sha512": "c994269e009c6a97860e1903e87ab08b6f79a8f5bb7c27261020e90d162f81d908fe42173969331f3cada2086df8a719caa62c46342d59d46a2b2dd2fb71efa1"
+		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.20.0.tar.gz",
+		  "sha512": "bd06ac77d9812569acbc51b79ac6c1259eb0cfa9b44e8ef167723880bc9c1e142589014ad7edd54695a2ac35f2aa0d78ef23b052354d06a01751cc201153a9df"
 		}
 	  ]
 	},
@@ -146,8 +146,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.1.tar.xz",
-		  "sha256": "cd3ca759f926763615fdfcea63c9761198c42889bc0615ceec73e22b24fde771"
+		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.6.tar.xz",
+		  "sha256": "f500e6cfddff55908f937711fc26a0840de28a1e9ec49621c0b6f1adbd8f818e"
 		}
 	  ]
 	},
@@ -157,8 +157,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.1.tar.xz",
-		  "sha256": "59bcaeacc5646b8dbdcfa4ef20ca6e818dd234910efb4cee1bbea441a3801c69"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.6.tar.xz",
+		  "sha256": "50f2b4d17c02eefe430bbefa8c5cd134b1be78a53c0f60e951136d96cf49fd4b"
 		}
 	  ]
 	},
@@ -168,8 +168,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.1.tar.xz",
-		  "sha256": "44f9104654b4fd042aebe90932ab92e7ff7d8460fbc05b23dad87dffe70974cc"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.6.tar.xz",
+		  "sha256": "b3b07fe3f1ce7fe93aa9be7217866044548f35c4a7792280eec7e108a32f9817"
 		}
 	  ]
 	},
@@ -179,8 +179,8 @@
 	  "sources": [
 		{
 		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.1.tar.xz",
-		  "sha256": "2f39b6f222d98666f9ff420a00233e336949953a846237c2bfafc8805f509f0e"
+		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.6.tar.xz",
+		  "sha256": "b4029cd2908a089c55f1d902a565d007495c95b1442d838485dc47fb12df7137"
 		}
 	  ]
 	},
