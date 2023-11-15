@@ -95,7 +95,13 @@
 	},
 	{
 	  "name": "libgnunetchat",
-	  "buildsystem": "meson",
+	  "buildsystem": "simple",
+	  "build-commands": [
+		"sed -i '47,49d' src/gnunet_chat_lib.c",
+		"meson setup --prefix /app --buildtype release custom-build",
+		"meson compile -C custom-build",
+		"meson install -C custom-build"
+	  ],
 	  "sources": [
 	    {
 		  "type": "archive",
