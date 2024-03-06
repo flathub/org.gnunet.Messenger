@@ -76,7 +76,7 @@
                         "url": "https://api.github.com/repos/jedisct1/libsodium/releases/latest",
                         "version-query": ".tag_name | sub(\"-RELEASE$\"; \"\")",
                         "url-query": ".assets[] | select(.name==\"libsodium-\" + $version + \".tar.gz\") | .browser_download_url",
-						"is-important": true
+                        "is-important": true
                     }
                 }
             ]
@@ -90,13 +90,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-latest.tar.gz",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.20.0.tar.gz",
                     "sha512": "bd06ac77d9812569acbc51b79ac6c1259eb0cfa9b44e8ef167723880bc9c1e142589014ad7edd54695a2ac35f2aa0d78ef23b052354d06a01751cc201153a9df",
                     "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-latest.tar.gz",
-                        "pattern": "https://ftp.gnu.org/gnu/gnunet/gnunet-([0-9.]+).tar.gz",
-						"is-important": true
+                        "type": "html",
+                        "url": "https://git.gnunet.org/gnunet.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/gnunet-$version.tar.gz",
+                        "is-important": true
                     }
                 }
             ]
@@ -130,13 +131,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-latest.tar.xz",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.1.3.tar.xz",
                     "sha512": "356ae45ec62bf51dd5a8effb3d40830818fc3d9584a7b810150cb9dff9504fad411df214b0a9ff3ac42b3cfc8b30a9fa802dc962a55a79999729d8a23e56ac68",
                     "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-latest.tar.xz",
-                        "pattern": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-([0-9.]+).tar.xz",
-						"is-important": true
+                        "type": "html",
+                        "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-$version.tar.xz",
+                        "is-important": true
                     }
                 }
             ]
@@ -263,13 +265,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-latest.tar.xz",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.8.0.tar.xz",
                     "sha512": "2628ad2f582a16e078427e94171de5a9b325fd74190b43296391ddfe136bad373ab5408af24e804935a07e0e45948432b1db4c177170f121c10170ede7a6133b",
                     "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-latest.tar.xz",
-                        "pattern": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-([0-9.]+).tar.xz",
-						"is-main-source": true
+                        "type": "html",
+                        "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-$version.tar.xz",
+                        "is-main-source": true
                     }
                 }
             ]
