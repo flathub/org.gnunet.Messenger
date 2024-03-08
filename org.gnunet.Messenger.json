@@ -1,205 +1,287 @@
 {
-  "app-id": "org.gnunet.Messenger",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
-  "sdk": "org.gnome.Sdk",
-  "command": "messenger-gtk",
-  "finish-args": [
-    "--share=ipc",
-	"--socket=wayland",
-	"--socket=fallback-x11",
-	"--share=network",
-	"--socket=pulseaudio",
-	/* --device=dri was redundant */
-
-	/* File access to share files */
-	"--filesystem=xdg-desktop:ro",
-	"--filesystem=xdg-documents:ro",
-	"--filesystem=xdg-download:rw",
-	"--filesystem=xdg-music:ro",
-	"--filesystem=xdg-pictures:ro",
-	"--filesystem=xdg-public-share:ro",
-	"--filesystem=xdg-videos:ro",
-	"--filesystem=xdg-templates:ro",
-	
-	/* Webcam access to scan QR codes */
-	"--device=all"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/share/aclocal",
-    "/share/man",
-    "/share/info",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    {
-	  "name": "recutils",
-	  "buildsystem": "autotools",
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://ftp.gnu.org/gnu/recutils/recutils-1.9.tar.gz",
-		  "sha512": "775b3b8925a4e5c6f04c6376291b966bdc271f172be2bca06b1f02155ecba12d916c22219f85fe0393f7f9f200f3788ab5fa5d522da2b84b2a0c0ec198318809"
-		}
-	  ]
-	},
-	{
-	  "name": "jansson",
-	  "buildsystem": "autotools",
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://digip.org/jansson/releases/jansson-2.13.tar.gz",
-		  "sha512": "79e26745e257118d4860cbfd57e250834c0766523d7f5c3d9e34438805f9c3064a5890ba3108292e5f2cb24d77a77049ffddd17332c65c293b70fb91869b67e6"
-		}
-	  ]
-	},
-	{
-	  "name": "libsodium",
-	  "buildsystem": "autotools",
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.19.tar.gz",
-		  "sha512": "8e9b6d796f6330e00921ce37f1b43545966094250938626ae227deef5fd1279f2fc18b5cd55e23484732a27df4d919cf0d2f07b9c2f1aa0c0ef689e668b0d439"
-		}
-	  ]
-	},
-    {
-	  "name": "gnunet",
-	  "buildsystem": "autotools",
-	  "config-opts": [
-		"--disable-documentation"
-	  ],
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/gnunet-0.20.0.tar.gz",
-		  "sha512": "bd06ac77d9812569acbc51b79ac6c1259eb0cfa9b44e8ef167723880bc9c1e142589014ad7edd54695a2ac35f2aa0d78ef23b052354d06a01751cc201153a9df"
-		}
-	  ]
-	},
-	{
-	  "name": "check",
-	  "buildsystem": "autotools",
-	  "sources": [
-		{
-		  "type": "archive",
-		  "url": "https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz",
-		  "sha512": "77fb34348bc1b1517801865afee5064121a245c10685e6bb6b8f743552646a0643cfdf9fd3dfbf9b2297d9430dfdd49616cf7daf41298d2dbd699f10d654a025"
-		}
-	  ]
-	},
-	{
-	  "name": "libgnunetchat",
-	  "buildsystem": "simple",
-	  "build-commands": [
-		"sed -i '47,49d' src/gnunet_chat_lib.c",
-		"meson setup --prefix /app --buildtype release custom-build",
-		"meson compile -C custom-build",
-		"meson install -C custom-build"
-	  ],
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/libgnunetchat-0.1.3.tar.xz",
-		  "sha512": "356ae45ec62bf51dd5a8effb3d40830818fc3d9584a7b810150cb9dff9504fad411df214b0a9ff3ac42b3cfc8b30a9fa802dc962a55a79999729d8a23e56ac68"
-		}
-	  ]
-	},
-	{
-	  "name": "libqrencode",
-	  "buildsystem": "autotools",
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://fukuchi.org/works/qrencode/qrencode-4.1.1.tar.gz",
-		  "sha512": "209bb656ae3f391b03c7b3ceb03e34f7320b0105babf48b619e7a299528b8828449e0e7696f0b5db0d99170a81709d0518e34835229a748701e7df784e58a9ce"
-		}
-	  ]
-	},
-	{
-	  "name": "zbar",
-	  "buildsystem": "autotools",
-	  "config-opts": [
-	    "--with-x=no",
-		"--enable-pthread=yes",
-		"--enable-doc=no",
-		"--enable-video=yes",
-		"--with-jpeg=yes",
-		"--with-gtk=no",
-		"--with-gir=no",
-		"--with-qt=no",
-		"--with-python=no",
-		"--with-java=no",
-		"--with-dbus=no",
-		"--without-imagemagick"
-	  ],
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.90.tar.gz",
-		  "sha512": "b6f8ed573614679e511b7e00154b46e8083dd5f57ed1d84ffe6f0b93b240cc7be51005a1d501fd715bd89df6e0eb5c0a03eda971ecde9364d53ceb42c81b4ac1"
-		}
-	  ]
-	},
-	{
-	  "name": "gstreamer",
-	  "buildsystem": "meson",
-	  "sources": [
-		{
-		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.6.tar.xz",
-		  "sha256": "f500e6cfddff55908f937711fc26a0840de28a1e9ec49621c0b6f1adbd8f818e"
-		}
-	  ]
-	},
-	{
-	  "name": "gst-plugins-base",
-	  "buildsystem": "meson",
-	  "sources": [
-		{
-		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.6.tar.xz",
-		  "sha256": "50f2b4d17c02eefe430bbefa8c5cd134b1be78a53c0f60e951136d96cf49fd4b"
-		}
-	  ]
-	},
-	{
-	  "name": "gst-plugins-good",
-	  "buildsystem": "meson",
-	  "sources": [
-		{
-		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.6.tar.xz",
-		  "sha256": "b3b07fe3f1ce7fe93aa9be7217866044548f35c4a7792280eec7e108a32f9817"
-		}
-	  ]
-	},
-	{
-	  "name": "gst-plugins-bad",
-	  "buildsystem": "meson",
-	  "sources": [
-		{
-		  "type": "archive",
-		  "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.6.tar.xz",
-		  "sha256": "b4029cd2908a089c55f1d902a565d007495c95b1442d838485dc47fb12df7137"
-		}
-	  ]
-	},
-	{
-	  "name": "messenger-gtk",
-	  "buildsystem": "meson",
-	  "sources": [
-	    {
-		  "type": "archive",
-		  "url": "https://ftpmirror.gnu.org/gnunet/messenger-gtk-0.8.0.tar.xz",
-		  "sha512": "2628ad2f582a16e078427e94171de5a9b325fd74190b43296391ddfe136bad373ab5408af24e804935a07e0e45948432b1db4c177170f121c10170ede7a6133b"
-		}
-	  ]
-	}
-  ]
+    "app-id": "org.gnunet.Messenger",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "45",
+    "sdk": "org.gnome.Sdk",
+    "command": "messenger-gtk",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--share=network",
+        "--socket=pulseaudio",
+        "--filesystem=xdg-desktop:ro",
+        "--filesystem=xdg-documents:ro",
+        "--filesystem=xdg-download:rw",
+        "--filesystem=xdg-music:ro",
+        "--filesystem=xdg-pictures:ro",
+        "--filesystem=xdg-public-share:ro",
+        "--filesystem=xdg-videos:ro",
+        "--filesystem=xdg-templates:ro",
+        "--device=all"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/aclocal",
+        "/share/man",
+        "/share/info",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
+        {
+            "name": "recutils",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/recutils/recutils-1.9.tar.gz",
+                    "sha512": "775b3b8925a4e5c6f04c6376291b966bdc271f172be2bca06b1f02155ecba12d916c22219f85fe0393f7f9f200f3788ab5fa5d522da2b84b2a0c0ec198318809",
+                    "x-checker-data": {
+                        "type": "rotating-url",
+                        "url": "https://ftp.gnu.org/gnu/recutils/recutils-1.9.tar.gz",
+                        "pattern": "https://ftp.gnu.org/gnu/recutils/recutils-([0-9.]+).tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "jansson",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz",
+                    "sha512": "5a592776c7ba8c0b1f5efaf813f77948bbc4bda168a72d221d176af0cf61038e26c1f30795433be10e2fc5069d5763d11852a8574774906a9f8ad261ac30109c",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/akheron/jansson/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"jansson-\" + $version + \".tar.gz\") | .browser_download_url"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libsodium",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/jedisct1/libsodium/releases/download/1.0.19-RELEASE/libsodium-1.0.19.tar.gz",
+                    "sha512": "8e9b6d796f6330e00921ce37f1b43545966094250938626ae227deef5fd1279f2fc18b5cd55e23484732a27df4d919cf0d2f07b9c2f1aa0c0ef689e668b0d439",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/jedisct1/libsodium/releases/latest",
+                        "version-query": ".tag_name | sub(\"-RELEASE$\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"libsodium-\" + $version + \".tar.gz\") | .browser_download_url",
+                        "is-important": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gnunet",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-documentation"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.21.0.tar.gz",
+                    "sha512": "38e47f10f94043a0f69df16e6b77a8546f74d259db1a931d9d20e1ff8b29cd86e0fbff25bb63eb7f7dd9e3d484631c6806e6aeba97ee5c446646f45f9a704032",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://git.gnunet.org/gnunet.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/gnunet-$version.tar.gz",
+                        "is-important": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "check",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz",
+                    "sha512": "77fb34348bc1b1517801865afee5064121a245c10685e6bb6b8f743552646a0643cfdf9fd3dfbf9b2297d9430dfdd49616cf7daf41298d2dbd699f10d654a025",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/libcheck/check/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".assets[] | select(.name==\"check-\" + $version + \".tar.gz\") | .browser_download_url"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libgnunetchat",
+            "buildsystem": "simple",
+            "build-commands": [
+				"sed -i '40d' meson.build",
+                "meson setup --prefix /app --buildtype release custom-build",
+                "meson compile -C custom-build",
+                "meson install -C custom-build"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.3.0.tar.gz",
+                    "sha512": "b92c7e34bdbda47dfb25b2ff368270975ad4e5afdb8e7e20389029f188339f71954581e15f519922d16784d880f02df455cf289e7f220dadb67699d72e94be82",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-$version.tar.gz",
+                        "is-important": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libqrencode",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://fukuchi.org/works/qrencode/qrencode-4.1.1.tar.gz",
+                    "sha512": "209bb656ae3f391b03c7b3ceb03e34f7320b0105babf48b619e7a299528b8828449e0e7696f0b5db0d99170a81709d0518e34835229a748701e7df784e58a9ce",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/fukuchi/libqrencode/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".tag_name | sub(\"^v\"; \"https://fukuchi.org/works/qrencode/qrencode-\") | sub(\"$\"; \".tar.gz\")"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "zbar",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--with-x=no",
+                "--enable-pthread=yes",
+                "--enable-doc=no",
+                "--enable-video=yes",
+                "--with-jpeg=yes",
+                "--with-gtk=no",
+                "--with-gir=no",
+                "--with-qt=no",
+                "--with-python=no",
+                "--with-java=no",
+                "--with-dbus=no",
+                "--without-imagemagick"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
+                    "sha512": "61ac8d50c5d236f996cf60221198e3b9357329a9ecda67b29495001f59055ae0124fb1dd70c6ec075eb96eb2ef42c22604a447c9203126f9d0f8108a4e268056",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/mchehab/zbar/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".tag_name | sub(\"^\"; \"https://linuxtv.org/downloads/zbar/zbar-\") | sub(\"$\"; \".tar.gz\")"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gstreamer",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.24.0.tar.xz",
+                    "sha256": "81c38617798d331269e389d56fb1388073e1dc9d489fe9bf2113f86b48b59138",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gst-plugins-base",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.24.0.tar.xz",
+                    "sha256": "f33774129c437e2207034f8927af4cf7ed8c0f006a4602b5cde2823ec6c0cc07",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gst-plugins-good",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.24.0.tar.xz",
+                    "sha256": "b59148274c71b63eaf13e27785b68c946348e06c6c96d9f2682fe6479b4c0585",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gst-plugins-bad",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.0.tar.xz",
+                    "sha256": "d23c3a1a79c425d21078b4892c3302a1d4930d67b83dfa8e03df416fc3f97eba",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "messenger-gtk",
+            "buildsystem": "simple",
+            "build-commands": [
+				"sed -i 's/use_libportal = true/use_libportal = false/' meson.build",
+                "meson setup --prefix /app --buildtype release custom-build",
+                "meson compile -C custom-build",
+                "meson install -C custom-build"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.9.0.tar.gz",
+                    "sha512": "00189e80975ddd9ca1b791d09f2814ddbda7462395e8e0cf9ed20fd1e22731e0ac94d0e75ea7bc8b1a10cd383634b14cc7ac234801fb17e83156f495cf389c1f",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
+                        "version-pattern": ">v([\\d\\.]+)</a>",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-$version.tar.gz",
+                        "is-main-source": true
+                    }
+                }
+            ]
+        }
+    ]
 }
