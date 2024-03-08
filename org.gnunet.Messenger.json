@@ -123,6 +123,7 @@
             "name": "libgnunetchat",
             "buildsystem": "simple",
             "build-commands": [
+				"sed -i '40d' meson.build",
                 "meson setup --prefix /app --buildtype release custom-build",
                 "meson compile -C custom-build",
                 "meson install -C custom-build"
@@ -260,7 +261,13 @@
         },
         {
             "name": "messenger-gtk",
-            "buildsystem": "meson",
+            "buildsystem": "simple",
+            "build-commands": [
+				"sed -i 's/use_libportal = true/use_libportal = false/' meson.build",
+                "meson setup --prefix /app --buildtype release custom-build",
+                "meson compile -C custom-build",
+                "meson install -C custom-build"
+            ],
             "sources": [
                 {
                     "type": "archive",
