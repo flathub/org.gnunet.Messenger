@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.20.0.tar.gz",
-                    "sha512": "bd06ac77d9812569acbc51b79ac6c1259eb0cfa9b44e8ef167723880bc9c1e142589014ad7edd54695a2ac35f2aa0d78ef23b052354d06a01751cc201153a9df",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.21.0.tar.gz",
+                    "sha512": "38e47f10f94043a0f69df16e6b77a8546f74d259db1a931d9d20e1ff8b29cd86e0fbff25bb63eb7f7dd9e3d484631c6806e6aeba97ee5c446646f45f9a704032",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -123,7 +123,6 @@
             "name": "libgnunetchat",
             "buildsystem": "simple",
             "build-commands": [
-                "sed -i '47,49d' src/gnunet_chat_lib.c",
                 "meson setup --prefix /app --buildtype release custom-build",
                 "meson compile -C custom-build",
                 "meson install -C custom-build"
@@ -131,13 +130,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.1.3.tar.xz",
-                    "sha512": "356ae45ec62bf51dd5a8effb3d40830818fc3d9584a7b810150cb9dff9504fad411df214b0a9ff3ac42b3cfc8b30a9fa802dc962a55a79999729d8a23e56ac68",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.3.0.tar.gz",
+                    "sha512": "b92c7e34bdbda47dfb25b2ff368270975ad4e5afdb8e7e20389029f188339f71954581e15f519922d16784d880f02df455cf289e7f220dadb67699d72e94be82",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
                         "version-pattern": ">v([\\d\\.]+)</a>",
-                        "url-template": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-$version.tar.xz",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-$version.tar.gz",
                         "is-important": true
                     }
                 }
@@ -265,13 +264,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.8.0.tar.xz",
-                    "sha512": "2628ad2f582a16e078427e94171de5a9b325fd74190b43296391ddfe136bad373ab5408af24e804935a07e0e45948432b1db4c177170f121c10170ede7a6133b",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.9.0.tar.gz",
+                    "sha512": "00189e80975ddd9ca1b791d09f2814ddbda7462395e8e0cf9ed20fd1e22731e0ac94d0e75ea7bc8b1a10cd383634b14cc7ac234801fb17e83156f495cf389c1f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
                         "version-pattern": ">v([\\d\\.]+)</a>",
-                        "url-template": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-$version.tar.xz",
+                        "url-template": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-$version.tar.gz",
                         "is-main-source": true
                     }
                 }
