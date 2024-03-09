@@ -18,7 +18,7 @@
         "--filesystem=xdg-public-share:ro",
         "--filesystem=xdg-videos:ro",
         "--filesystem=xdg-templates:ro",
-        "--device=all"
+        "--filesystem=xdg-run/pipewire-0"
     ],
     "cleanup": [
         "/include",
