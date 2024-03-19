@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.21.0.tar.gz",
-                    "sha512": "38e47f10f94043a0f69df16e6b77a8546f74d259db1a931d9d20e1ff8b29cd86e0fbff25bb63eb7f7dd9e3d484631c6806e6aeba97ee5c446646f45f9a704032",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.21.1.tar.gz",
+                    "sha512": "20e9dc7e0c37e83628142e5b45c9452604f60a7dddf0964822cee9a6acd0acf24be99649fdf5b866fd0ec76b8be0e04dfa11e6ac5140cc23353cc084358d6dff",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -123,7 +123,7 @@
             "name": "libgnunetchat",
             "buildsystem": "simple",
             "build-commands": [
-				"sed -i '40d' meson.build",
+                "sed -i '40d' meson.build",
                 "meson setup --prefix /app --buildtype release custom-build",
                 "meson compile -C custom-build",
                 "meson install -C custom-build"
@@ -259,31 +259,31 @@
                 }
             ]
         },
-	{
-	    "name": "libportal",
-	    "buildsystem": "meson",
-	    "config-opts": [
-		"-Dbackend-gtk3=enabled",
-		"-Dbackend-gtk4=disabled",
-		"-Dbackend-qt5=disabled",
-	        "-Dportal-tests=false",
-		"-Ddocs=false",
-		"-Dtests=false"
-	    ],
-	    "sources": [
-	        {
-		    "type": "archive",
-		    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
-		    "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805",
-		    "x-checker-data": {
-		        "type": "html",
-			"url": "https://github.com/flatpak/libportal/releases",
-			"version-pattern": "libportal-([\\d\\.]+).tar.xz",
-			"url-template": "https://github.com/flatpak/libportal/releases/download/$version/libportal-$version.tar.xz"
-		    }
-		}
-	    ]
-	},
+        {
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbackend-gtk3=enabled",
+                "-Dbackend-gtk4=disabled",
+                "-Dbackend-qt5=disabled",
+                "-Dportal-tests=false",
+                "-Ddocs=false",
+                "-Dtests=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+                    "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://github.com/flatpak/libportal/releases",
+                        "version-pattern": "libportal-([\\d\\.]+).tar.xz",
+                        "url-template": "https://github.com/flatpak/libportal/releases/download/$version/libportal-$version.tar.xz"
+                    }
+                }
+            ]
+        },
         {
             "name": "messenger-gtk",
             "buildsystem": "meson",
