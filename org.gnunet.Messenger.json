@@ -131,8 +131,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.3.0.tar.gz",
-                    "sha512": "b92c7e34bdbda47dfb25b2ff368270975ad4e5afdb8e7e20389029f188339f71954581e15f519922d16784d880f02df455cf289e7f220dadb67699d72e94be82",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.3.1.tar.gz",
+                    "sha512": "4193bdac8f5f329ae1ecc58574508ff90d564677041d264fe916652b1dc74563b49d1661f24000d6e771ce1f9ede809c09ad8ff54c863a1b913b48f037659360",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
