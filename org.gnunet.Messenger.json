@@ -238,6 +238,40 @@
             ]
         },
         {
+            "name": "gst-plugins-ugly",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.7.tar.xz",
+                    "sha256": "3dc954fc53fe18883670322a1c215e3c6529036e0a69b30f64781cd40c268593",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gst-libav",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.7.tar.xz",
+                    "sha256": "c3e4179ba183c2d3101edf87ff70dd07e728c766a5fee34e6ecded76ca5802df",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
+                        "version-pattern": "Release ([\\d\\.]+)",
+                        "url-template": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "libportal",
             "buildsystem": "meson",
             "config-opts": [
