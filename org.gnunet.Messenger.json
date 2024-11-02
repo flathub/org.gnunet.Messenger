@@ -175,8 +175,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.24.8.tar.xz",
-                    "sha256": "b807dbf36c5d2b3ce1c604133ed0c737350f9523ce4d8d644a1177c5f9d6ded3",
+                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.24.9.tar.xz",
+                    "sha256": "ebf47b6beef508a00c8557d4c1f1713e5c7ef9ba70dac45deed80e182bcf260f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -192,8 +192,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.24.8.tar.xz",
-                    "sha256": "10fb31743750ccd498d3933e8aaecda563ebc65596a6ab875b47ee936e4b9599",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.24.9.tar.xz",
+                    "sha256": "5bb3b946907d3ce04dd842b610c8111c2b0611351b25a1fa22af5efa897857cb",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -209,8 +209,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.24.8.tar.xz",
-                    "sha256": "613a20f03bd4544b52f10f6ceb4e0fffd25eff15bf338ab8b12b971982eb0153",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.24.9.tar.xz",
+                    "sha256": "897de50bff337e3ca2f86f1eaa28e0828d83024156162a50c4ea0af86e29799f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -226,8 +226,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.8.tar.xz",
-                    "sha256": "35ad70de3d7cbca3089f33bb77c45750daad2ae93d79827fdbb469fa8aba84eb",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.9.tar.xz",
+                    "sha256": "36fcf7a9af0a753b43bb03b9835246f74d72f7124369e66a1e2dc7b04f5a5cab",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -243,8 +243,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.8.tar.xz",
-                    "sha256": "3dfc12bf0b766682b7d6e1e29a404b55e2375ba172d11900179738ae89b7a2d5",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.9.tar.xz",
+                    "sha256": "4b6b30110f38cd05eb67422297142b75a55fe00003105f48b13603e6761cc3b6",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -260,8 +260,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.8.tar.xz",
-                    "sha256": "1e4a8fd537621d236442cf90a6e9ad5e00f87bffffdaeb1fd8bfd23719de8c75",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.9.tar.xz",
+                    "sha256": "32682e9ae508ee01f4fb134b3a520081e2ac007220997577624b1d16171d456c",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
