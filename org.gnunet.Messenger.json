@@ -91,8 +91,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.22.2.tar.gz",
-                    "sha512": "e296ca2db54d424f535fff504616f2465615daa20b895c4ca1b1f92a8b6f3c8e6b44280dd6d81e132c5d3d4a6dd812fb3696f679c2f145fb739150a5abf2cdcf",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.23.1.tar.gz",
+                    "sha512": "e88b9aaaf0eca6c16ab29a4a483074fb93a5e2ecd117aef8ff73d4e9da64906c5e0048e3c525467bc7a6d3e56a42e9181e8872ab5c6e7a63e3df40655b11d840",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -285,8 +285,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
-                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.0/libportal-0.9.0.tar.xz",
+                    "sha256": "113910f06f39387328805397053d20c7acafb7388d8e6cd5e06e05efb9690735",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://github.com/flatpak/libportal/releases",
