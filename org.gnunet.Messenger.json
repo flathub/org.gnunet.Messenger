@@ -91,8 +91,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.22.0.tar.gz",
-                    "sha512": "7bf68930e5ef9d31e526c8debf0ff2b1ec539d28f0031d0e3ce56cc5709725b647de84738aeab812ac538d39e73bed0dd84516a42a134ae1b047b7a7dd4f77c4",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.23.1.tar.gz",
+                    "sha512": "e88b9aaaf0eca6c16ab29a4a483074fb93a5e2ecd117aef8ff73d4e9da64906c5e0048e3c525467bc7a6d3e56a42e9181e8872ab5c6e7a63e3df40655b11d840",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -109,8 +109,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.5.1.tar.gz",
-                    "sha512": "b91713624438d5ba10811d1f2659438f80a263f9bb2da0e7135d394b4c5a9fbde3d5a1596e17c9b10e2fed5a2c6fa253985a506a130fcd9d7db6cb116b18b5a7",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.5.2.tar.gz",
+                    "sha512": "07e9755c7c13f3f26adc35bd331dbac3f87d9d179942f8015b7bfff6a66815e9bb968677ae01cc94447d6a94d7c82e063a78bb05e58d4212e13c08daa0d50c37",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
@@ -175,8 +175,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.24.8.tar.xz",
-                    "sha256": "b807dbf36c5d2b3ce1c604133ed0c737350f9523ce4d8d644a1177c5f9d6ded3",
+                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.25.1.tar.xz",
+                    "sha256": "755fd5ca09502d1031f4f33d6c85914176853a8fdd648f8c73c31d89ae0a0644",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -192,8 +192,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.24.8.tar.xz",
-                    "sha256": "10fb31743750ccd498d3933e8aaecda563ebc65596a6ab875b47ee936e4b9599",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.25.1.tar.xz",
+                    "sha256": "c2db4a186462ccaea9dc63a7015e391f4a10571f8f4fd2fd0502f0cf0039104f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -209,8 +209,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.24.8.tar.xz",
-                    "sha256": "613a20f03bd4544b52f10f6ceb4e0fffd25eff15bf338ab8b12b971982eb0153",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.25.1.tar.xz",
+                    "sha256": "55be81509f8d5c85d3719884bef1fa8ef70a08f52ab42b3a8c73d4184d188ac9",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -226,8 +226,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.8.tar.xz",
-                    "sha256": "35ad70de3d7cbca3089f33bb77c45750daad2ae93d79827fdbb469fa8aba84eb",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.25.1.tar.xz",
+                    "sha256": "9a65acd9f348b54ab3e1b62aa7c20129a0ae27b5de16853c8e62d6166e19a157",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -243,8 +243,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.8.tar.xz",
-                    "sha256": "3dfc12bf0b766682b7d6e1e29a404b55e2375ba172d11900179738ae89b7a2d5",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.25.1.tar.xz",
+                    "sha256": "de7e71a7ead4712bfb78af15c4c25ca747e480b2ad2f27887775b7b634fbedcc",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -260,8 +260,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.8.tar.xz",
-                    "sha256": "1e4a8fd537621d236442cf90a6e9ad5e00f87bffffdaeb1fd8bfd23719de8c75",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.25.1.tar.xz",
+                    "sha256": "ad00382c1f173b3a96037250c34c955d3dc214e2ed16aae25a2489766055e28d",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -285,8 +285,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
-                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.0/libportal-0.9.0.tar.xz",
+                    "sha256": "113910f06f39387328805397053d20c7acafb7388d8e6cd5e06e05efb9690735",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://github.com/flatpak/libportal/releases",
@@ -302,8 +302,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.10.1.tar.gz",
-                    "sha512": "5658626580ca2b41bede474d35fbf2024de0cd314fd399e46b2074d37f7fcb1fbde6a4bdce02e5c4d81e7642189c2f4ce01ac079b69646aa069fd7318aabd903",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.10.2.tar.gz",
+                    "sha512": "f6f77bed6861347a4e04f0591569e517171cb63186b2122b8edeeefab03e053038cc6254f09a4b4052eb5d70b5ac266401a57ce7f5460b397935e88c8346880a",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
