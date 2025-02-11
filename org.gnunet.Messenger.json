@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnunet.Messenger",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "command": "messenger-gtk",
     "finish-args": [
@@ -34,6 +34,9 @@
         {
             "name": "recutils",
             "buildsystem": "autotools",
+			"build-options": {
+				"cflags": "-Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration"
+			},
             "sources": [
                 {
                     "type": "archive",
@@ -316,3 +319,4 @@
         }
     ]
 }
+
