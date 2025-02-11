@@ -34,6 +34,9 @@
         {
             "name": "recutils",
             "buildsystem": "autotools",
+			"build-options": {
+				"cflags": "-Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration"
+			},
             "sources": [
                 {
                     "type": "archive",
