@@ -3,12 +3,6 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
-	"add-build-extensions": {
-		"org.freedesktop.Platform.openh264": {
-			"directory": "lib/openh264",
-			"version": "2.5.1"
-		}
-	},
     "command": "messenger-gtk",
     "finish-args": [
         "--device=dri",
@@ -171,6 +165,23 @@
                         "url": "https://api.github.com/repos/mchehab/zbar/releases/latest",
                         "version-query": ".tag_name",
                         "url-query": ".tag_name | sub(\"^\"; \"https://linuxtv.org/downloads/zbar/zbar-\") | sub(\"$\"; \".tar.gz\")"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "openh264",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/cisco/openh264/archive/refs/tags/2.5.1.tar.gz",
+                    "sha512": "ef37f1ba3cdd73d344087e9fe7aa073ad3b354b53e8561a699e42a75af7fdd3429aa6d10cc6f933ca88b761ddebfe842513009d08848780add18525b4b2ca1ca",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/cisco/openh264/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".tag_name | sub(\"^v\"; \"https://github.com/cisco/openh264/archive/refs/tags/\") | sub(\"$\"; \".tar.gz\")"
                     }
                 }
             ]
