@@ -3,6 +3,12 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
+	"add-build-extensions": {
+		"org.freedesktop.Platform.openh264": {
+			"directory": "lib/openh264",
+			"version": "2.5.1"
+		}
+	},
     "command": "messenger-gtk",
     "finish-args": [
         "--device=dri",
