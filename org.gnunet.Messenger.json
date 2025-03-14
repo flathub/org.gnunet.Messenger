@@ -87,15 +87,12 @@
         },
         {
             "name": "gnunet",
-            "buildsystem": "autotools",
-            "config-opts": [
-                "--disable-documentation"
-            ],
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.23.1.tar.gz",
-                    "sha512": "e88b9aaaf0eca6c16ab29a4a483074fb93a5e2ecd117aef8ff73d4e9da64906c5e0048e3c525467bc7a6d3e56a42e9181e8872ab5c6e7a63e3df40655b11d840",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.24.0.tar.gz",
+                    "sha512": "490b55991ed49630e9a5ed0128dbed58f249b070fcdf56282eb7e54c82e8d90f04e6002205bc8b36d247586f00b7d9c6c4aeb34de9d82a26d765e7cb6fc5174f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -112,8 +109,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.5.2.tar.gz",
-                    "sha512": "07e9755c7c13f3f26adc35bd331dbac3f87d9d179942f8015b7bfff6a66815e9bb968677ae01cc94447d6a94d7c82e063a78bb05e58d4212e13c08daa0d50c37",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.5.3.tar.gz",
+                    "sha512": "ae2a1b4762d2dd600c7bbf213da778c883841bb9897f1b81402d2d72a40c8a551a479de8b80e2a938d2455251471b5a672dadca84d568cfe409a89bcd1130007",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
@@ -168,6 +165,23 @@
                         "url": "https://api.github.com/repos/mchehab/zbar/releases/latest",
                         "version-query": ".tag_name",
                         "url-query": ".tag_name | sub(\"^\"; \"https://linuxtv.org/downloads/zbar/zbar-\") | sub(\"$\"; \".tar.gz\")"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "openh264",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/cisco/openh264/archive/refs/tags/2.5.1.tar.gz",
+                    "sha512": "ef37f1ba3cdd73d344087e9fe7aa073ad3b354b53e8561a699e42a75af7fdd3429aa6d10cc6f933ca88b761ddebfe842513009d08848780add18525b4b2ca1ca",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/cisco/openh264/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".tag_name | sub(\"^v\"; \"https://github.com/cisco/openh264/archive/refs/tags/\") | sub(\"$\"; \".tar.gz\")"
                     }
                 }
             ]
