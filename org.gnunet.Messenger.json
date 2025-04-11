@@ -91,8 +91,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.24.0.tar.gz",
-                    "sha512": "490b55991ed49630e9a5ed0128dbed58f249b070fcdf56282eb7e54c82e8d90f04e6002205bc8b36d247586f00b7d9c6c4aeb34de9d82a26d765e7cb6fc5174f",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.24.1.tar.gz",
+                    "sha512": "5425983eb687b8c5aff08f262ccfb0c5c5bdd0df064af05856c639ca9652ab924c040e6d3e4a5a42116fd9493f273f00ab2f217af3cee7413c54bae4077455eb",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
