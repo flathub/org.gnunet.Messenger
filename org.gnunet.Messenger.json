@@ -91,8 +91,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.24.3.tar.gz",
-                    "sha512": "893ee86385076ea762302b387bbe052d4b907b58927f591c7e19f5232c3b9d4d5d0fe30a66e40d5e39428974d87483331f92555c9be5ea803087bec00a4ee6f0",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.25.0.tar.gz",
+                    "sha512": "5ff3c4ecb79a96721e7cd23042dc93eca314ab95f7d24b096f63398f1b57f134c8d7b2c646eb4b95cc76c63ac0147c369d3119ca2d12e9a01cd74250dc0c3a37",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
@@ -109,8 +109,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.5.3.tar.gz",
-                    "sha512": "ae2a1b4762d2dd600c7bbf213da778c883841bb9897f1b81402d2d72a40c8a551a479de8b80e2a938d2455251471b5a672dadca84d568cfe409a89bcd1130007",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.6.0.tar.gz",
+                    "sha512": "46402752bf6f8a5b9e66fb7863f7b4430bc2679e42df4aeade48d6f60bd6d4d77d2079ea2ef26e72faa399eda9dd2aa485c8897f2e9af55f2258794f47424851",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
@@ -319,8 +319,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.10.2.tar.gz",
-                    "sha512": "f6f77bed6861347a4e04f0591569e517171cb63186b2122b8edeeefab03e053038cc6254f09a4b4052eb5d70b5ac266401a57ce7f5460b397935e88c8346880a",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-0.11.0.tar.gz",
+                    "sha512": "9f0fb3d72a785d4b6a077e684ba7ae0ce4353f728414a73f08fad6a2773de0d92a7514d0d701d7b1af93e096501fa1b7852760fdede7ce688504444f7f69b582",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
