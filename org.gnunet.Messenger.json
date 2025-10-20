@@ -85,62 +85,62 @@
                 }
             ]
         },
-		{
-			"name": "libtool",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
-					"sha512": "60599f5c3168a287fe3a35062fd2e32e0b73433fce820bfd18d28b0e3bd7a8fefde6d6f0505fbbc2d664119ab7c539269184993843289932c895847ea1ab9f04",
+        {
+            "name": "libtool",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
+                    "sha512": "60599f5c3168a287fe3a35062fd2e32e0b73433fce820bfd18d28b0e3bd7a8fefde6d6f0505fbbc2d664119ab7c539269184993843289932c895847ea1ab9f04",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libtool/libtool-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
-		{
-			"name": "libmicrohttpd",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
-					"sha512": "7092f307a00ba04b539be79a7c94ddf9b4b6e43343a66da49c6602fa860f77cf7f9017d7e40f9b7400d85a828a503248eb12dd121413aad68133003a20bb2c4a",
+                }
+            ]
+        },
+        {
+            "name": "libmicrohttpd",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
+                    "sha512": "7092f307a00ba04b539be79a7c94ddf9b4b6e43343a66da49c6602fa860f77cf7f9017d7e40f9b7400d85a828a503248eb12dd121413aad68133003a20bb2c4a",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
-		{
-			"name": "libunistring",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
-					"sha512": "ddab67454b3b5abd3008728d1dd8220bc2b3611bb3e49b0cfda84968dfb7dd6402ca652af2cc604794fb364f2a53e77f7108fa962d2c17e46b329ddec2dd0976",
+                }
+            ]
+        },
+        {
+            "name": "libunistring",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
+                    "sha512": "ddab67454b3b5abd3008728d1dd8220bc2b3611bb3e49b0cfda84968dfb7dd6402ca652af2cc604794fb364f2a53e77f7108fa962d2c17e46b329ddec2dd0976",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libunistring/libunistring-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
+                }
+            ]
+        },
         {
             "name": "gnunet",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.25.1.tar.gz",
-                    "sha512": "c3a72753ac745e481abc6a8f8cf39b5a244760edcb10d55aff0ab407e43f4a2d5d49e85c35eff64841a247c41c02e074c42184bbb799b6ee7b955b9148c453da",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.25.2.tar.gz",
+                    "sha512": "c40d0a8108d312b0140a1acd02a0a111ba8e2d8b31f53583e1834753bf7679e1dc903fdf50b1d93f844322a78903a35a95e8997c5f9bd44a31bc0c9484b20b73",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://git.gnunet.org/gnunet.git/refs/tags",
