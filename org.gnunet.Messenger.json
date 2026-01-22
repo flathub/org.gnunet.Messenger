@@ -85,62 +85,62 @@
                 }
             ]
         },
-		{
-			"name": "libtool",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
-					"sha512": "60599f5c3168a287fe3a35062fd2e32e0b73433fce820bfd18d28b0e3bd7a8fefde6d6f0505fbbc2d664119ab7c539269184993843289932c895847ea1ab9f04",
+        {
+            "name": "libtool",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
+                    "sha512": "60599f5c3168a287fe3a35062fd2e32e0b73433fce820bfd18d28b0e3bd7a8fefde6d6f0505fbbc2d664119ab7c539269184993843289932c895847ea1ab9f04",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libtool/libtool-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
-		{
-			"name": "libmicrohttpd",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
-					"sha512": "7092f307a00ba04b539be79a7c94ddf9b4b6e43343a66da49c6602fa860f77cf7f9017d7e40f9b7400d85a828a503248eb12dd121413aad68133003a20bb2c4a",
+                }
+            ]
+        },
+        {
+            "name": "libmicrohttpd",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
+                    "sha512": "7092f307a00ba04b539be79a7c94ddf9b4b6e43343a66da49c6602fa860f77cf7f9017d7e40f9b7400d85a828a503248eb12dd121413aad68133003a20bb2c4a",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
-		{
-			"name": "libunistring",
-			"buildsystem": "autotools",
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
-					"sha512": "ddab67454b3b5abd3008728d1dd8220bc2b3611bb3e49b0cfda84968dfb7dd6402ca652af2cc604794fb364f2a53e77f7108fa962d2c17e46b329ddec2dd0976",
+                }
+            ]
+        },
+        {
+            "name": "libunistring",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
+                    "sha512": "ddab67454b3b5abd3008728d1dd8220bc2b3611bb3e49b0cfda84968dfb7dd6402ca652af2cc604794fb364f2a53e77f7108fa962d2c17e46b329ddec2dd0976",
                     "x-checker-data": {
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libunistring/libunistring-([0-9.]+).tar.gz"
                     }
-				}
-			]
-		},
+                }
+            ]
+        },
         {
             "name": "gnunet",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.25.1.tar.gz",
-                    "sha512": "c3a72753ac745e481abc6a8f8cf39b5a244760edcb10d55aff0ab407e43f4a2d5d49e85c35eff64841a247c41c02e074c42184bbb799b6ee7b955b9148c453da",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.26.1.tar.gz",
+                    "sha512": "f2d1873979c94e6ff3a220760429813666c4097d02402be6c7c77aff508eb009eacd23f7e5269a6c8f19fae033370286553328a88a75b28315250ae5bc00304d",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.com/gnunet-messenger/gnunet/-/tags",
@@ -157,8 +157,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.6.0.tar.gz",
-                    "sha512": "46402752bf6f8a5b9e66fb7863f7b4430bc2679e42df4aeade48d6f60bd6d4d77d2079ea2ef26e72faa399eda9dd2aa485c8897f2e9af55f2258794f47424851",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.6.1.tar.gz",
+                    "sha512": "fe18b18cbac15b357a108d3bf1ef7927ae489060db18cb8cb72f3b1fb4209d52b45864d6819b5791c06243492278b3d98afe89f295966097eac917d12d56928e",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.com/gnunet-messenger/libgnunetchat/-/tags",
@@ -240,8 +240,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.27.2.tar.xz",
-                    "sha256": "ce129c7ea92dce3063b029171d1324d203927132fc3e0cf92b784ddd055c241d",
+                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.27.90.tar.xz",
+                    "sha256": "e6379b7413e72b0fd6e734d3a2ae875edd58108f1f4315bfe47907909f41bc80",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -257,8 +257,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.27.2.tar.xz",
-                    "sha256": "6f530a0eac4fe3a8e5487c3eea7b1fac307e2a21f056d9b41747818a88be4bf6",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.27.90.tar.xz",
+                    "sha256": "30c8e6f98274717efaaa8f54e3700d72c1ba8977678c38f15b51c6006bfad12f",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -274,8 +274,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.27.2.tar.xz",
-                    "sha256": "4f047416d71b102998db4cc513925cb317d87a3409d0ffae3ba218765b0f1ce5",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.27.90.tar.xz",
+                    "sha256": "6ae5c65ef3a00f0ca34d1bb8011be42240a590f8cd04690ad28d6fa331bc5f44",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -291,8 +291,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.27.2.tar.xz",
-                    "sha256": "f4ef4afbc0f71762babed8bba7c2dc4dcd90d5a401e0a79bd05f3b95974976d3",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.27.90.tar.xz",
+                    "sha256": "60d9fcc725bb56f4559b4925e6f469cd43bb96ec1bfd7554295e2b8c53ba9d4b",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -308,8 +308,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.27.2.tar.xz",
-                    "sha256": "da12a75184c7956178705141b7b0c87c7b813111e3f670ba71c01dab12d7c9fe",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.27.90.tar.xz",
+                    "sha256": "51514565c7864eec2d3e134439d42ec0a720e8d015436179abec9dca945522c5",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
@@ -325,8 +325,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.27.2.tar.xz",
-                    "sha256": "b4375bbc233e658ffe7f0211e40b39cbe95fe6153197f0a406ffc7967854edc8",
+                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.27.90.tar.xz",
+                    "sha256": "4ff894d57a1328424892f155aa919ee13568437e05457046858186e9ccd2ba59",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
