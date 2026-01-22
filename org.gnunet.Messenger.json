@@ -70,6 +70,13 @@
         {
             "name": "libsodium",
             "buildsystem": "autotools",
+			"build-options": {
+				"arch": {
+					"aarch64": {
+						"cflags": "-march=armv8-a+crypto+aes"
+					}
+				}
+			},
             "sources": [
                 {
                     "type": "archive",
