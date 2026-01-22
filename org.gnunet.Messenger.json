@@ -70,23 +70,16 @@
         {
             "name": "libsodium",
             "buildsystem": "autotools",
-			"build-options": {
-				"arch": {
-					"aarch64": {
-						"cflags": "-march=armv8-a+crypto+aes"
-					}
-				}
-			},
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/jedisct1/libsodium/releases/download/1.0.21-RELEASE/libsodium-1.0.21.tar.gz",
-                    "sha512": "ee8cc2f3f5707b172bf75d8c04afbd5f0c83c6f94dbab3f988f07aab716d96f1662556a59e09b3d83c3bd5c22f59327ad95937bf499d523c86146f4df830f777",
+                    "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.21-stable.tar.gz",
+                    "sha512": "20fd50c752a18accb06814496e53ae7ce71aa7f4fe43a3e7f27e0dc818afa5ba3274016f7bc4b166e133b61a4758710b7a84c97d907701e3a5abbde7fd529f77",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/jedisct1/libsodium/releases/latest",
                         "version-query": ".tag_name | sub(\"-RELEASE$\"; \"\")",
-                        "url-query": ".assets[] | select(.name==\"libsodium-\" + $version + \".tar.gz\") | .browser_download_url",
+                        "url-template": "https://download.libsodium.org/libsodium/releases/libsodium-$version-stable.tar.gz",
                         "is-important": true
                     }
                 }
