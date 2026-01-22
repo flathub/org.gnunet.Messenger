@@ -143,7 +143,7 @@
                     "sha512": "c3a72753ac745e481abc6a8f8cf39b5a244760edcb10d55aff0ab407e43f4a2d5d49e85c35eff64841a247c41c02e074c42184bbb799b6ee7b955b9148c453da",
                     "x-checker-data": {
                         "type": "html",
-                        "url": "https://git.gnunet.org/gnunet.git/refs/tags",
+                        "url": "https://gitlab.com/gnunet-messenger/gnunet/-/tags",
                         "version-pattern": ">v([\\d\\.]+)</a>",
                         "url-template": "https://ftp.gnu.org/gnu/gnunet/gnunet-$version.tar.gz",
                         "is-important": true
@@ -161,7 +161,7 @@
                     "sha512": "46402752bf6f8a5b9e66fb7863f7b4430bc2679e42df4aeade48d6f60bd6d4d77d2079ea2ef26e72faa399eda9dd2aa485c8897f2e9af55f2258794f47424851",
                     "x-checker-data": {
                         "type": "html",
-                        "url": "https://git.gnunet.org/libgnunetchat.git/refs/tags",
+                        "url": "https://gitlab.com/gnunet-messenger/libgnunetchat/-/tags",
                         "version-pattern": ">v([\\d\\.]+)</a>",
                         "url-template": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-$version.tar.gz",
                         "is-important": true
@@ -371,7 +371,7 @@
                     "sha512": "9f0fb3d72a785d4b6a077e684ba7ae0ce4353f728414a73f08fad6a2773de0d92a7514d0d701d7b1af93e096501fa1b7852760fdede7ce688504444f7f69b582",
                     "x-checker-data": {
                         "type": "html",
-                        "url": "https://git.gnunet.org/messenger-gtk.git/refs/tags",
+                        "url": "https://gitlab.com/gnunet-messenger/messenger-gtk/-/tags",
                         "version-pattern": ">v([\\d\\.]+)</a>",
                         "url-template": "https://ftp.gnu.org/gnu/gnunet/messenger-gtk-$version.tar.gz",
                         "is-main-source": true
