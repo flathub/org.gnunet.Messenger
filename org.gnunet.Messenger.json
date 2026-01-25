@@ -56,8 +56,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akheron/jansson/releases/download/v2.14.1/jansson-2.14.1.tar.gz",
-                    "sha512": "4c6fdf2efa74788fd1711d44293991346d70d22178109b3309ada079f59c30bd716f91e976235c40c640b177d82919a0e13d264ee714d359db266e2f1078c953",
+                    "url": "https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.gz",
+                    "sha512": "6c3d74acdf33f0c7940173e1a058c838af87f9de69f70896d246e54bbcf7e2734218b1b53bf4ddbf6b5d4b324184788f20853cc953b8397fa2c43e563ea57b1e",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/akheron/jansson/releases/latest",
@@ -139,8 +139,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.26.1.tar.gz",
-                    "sha512": "f2d1873979c94e6ff3a220760429813666c4097d02402be6c7c77aff508eb009eacd23f7e5269a6c8f19fae033370286553328a88a75b28315250ae5bc00304d",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.26.2.tar.gz",
+                    "sha512": "a10b749df28d422507acdd7fd27846ec255cf5f1d5404b88746326238a098fba14b39716c3bf024313381dcd0c6a6556279cd7737bffbf856071e7f23ae69365",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.com/gnunet-messenger/gnunet/-/tags",
