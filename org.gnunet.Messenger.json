@@ -3,6 +3,13 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.llvm20"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/llvm20/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/llvm20/lib"
+    },
     "command": "messenger-gtk",
     "finish-args": [
         "--device=dri",
@@ -56,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/akheron/jansson/releases/download/v2.14.1/jansson-2.14.1.tar.gz",
-                    "sha512": "4c6fdf2efa74788fd1711d44293991346d70d22178109b3309ada079f59c30bd716f91e976235c40c640b177d82919a0e13d264ee714d359db266e2f1078c953",
+                    "url": "https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.gz",
+                    "sha512": "6c3d74acdf33f0c7940173e1a058c838af87f9de69f70896d246e54bbcf7e2734218b1b53bf4ddbf6b5d4b324184788f20853cc953b8397fa2c43e563ea57b1e",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/akheron/jansson/releases/latest",
@@ -70,16 +77,27 @@
         {
             "name": "libsodium",
             "buildsystem": "autotools",
+			"build-options": {
+				"arch": {
+					"aarch64": {
+						"cflags": "-march=armv8-a+crypto+aes",
+						"env": {
+							"CC": "clang",
+							"CXX": "clang++"
+						}
+					}
+				}
+			},
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.libsodium.org/libsodium/releases/libsodium-1.0.21-stable.tar.gz",
-                    "sha512": "20fd50c752a18accb06814496e53ae7ce71aa7f4fe43a3e7f27e0dc818afa5ba3274016f7bc4b166e133b61a4758710b7a84c97d907701e3a5abbde7fd529f77",
+                    "url": "https://github.com/jedisct1/libsodium/releases/download/1.0.21-RELEASE/libsodium-1.0.21.tar.gz",
+                    "sha512": "ee8cc2f3f5707b172bf75d8c04afbd5f0c83c6f94dbab3f988f07aab716d96f1662556a59e09b3d83c3bd5c22f59327ad95937bf499d523c86146f4df830f777",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/jedisct1/libsodium/releases/latest",
                         "version-query": ".tag_name | sub(\"-RELEASE$\"; \"\")",
-                        "url-template": "https://download.libsodium.org/libsodium/releases/libsodium-$version-stable.tar.gz",
+                        "url-query": ".assets[] | select(.name==\"libsodium-\" + $version + \".tar.gz\") | .browser_download_url",
                         "is-important": true
                     }
                 }
@@ -230,108 +248,6 @@
                         "url": "https://api.github.com/repos/cisco/openh264/releases/latest",
                         "version-query": ".tag_name",
                         "url-query": ".tag_name | sub(\"^v\"; \"https://github.com/cisco/openh264/archive/refs/tags/\") | sub(\"$\"; \".tar.gz\")"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gstreamer",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.27.90.tar.xz",
-                    "sha256": "e6379b7413e72b0fd6e734d3a2ae875edd58108f1f4315bfe47907909f41bc80",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gst-plugins-base",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.27.90.tar.xz",
-                    "sha256": "30c8e6f98274717efaaa8f54e3700d72c1ba8977678c38f15b51c6006bfad12f",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gst-plugins-good",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.27.90.tar.xz",
-                    "sha256": "6ae5c65ef3a00f0ca34d1bb8011be42240a590f8cd04690ad28d6fa331bc5f44",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gst-plugins-bad",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.27.90.tar.xz",
-                    "sha256": "60d9fcc725bb56f4559b4925e6f469cd43bb96ec1bfd7554295e2b8c53ba9d4b",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gst-plugins-ugly",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.27.90.tar.xz",
-                    "sha256": "51514565c7864eec2d3e134439d42ec0a720e8d015436179abec9dca945522c5",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gst-libav",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.27.90.tar.xz",
-                    "sha256": "4ff894d57a1328424892f155aa919ee13568437e05457046858186e9ccd2ba59",
-                    "x-checker-data": {
-                        "type": "html",
-                        "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tags",
-                        "version-pattern": "Release ([\\d\\.]+)",
-                        "url-template": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz"
                     }
                 }
             ]
