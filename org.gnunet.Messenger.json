@@ -104,22 +104,6 @@
             ]
         },
         {
-            "name": "libtool",
-            "buildsystem": "autotools",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
-                    "sha512": "60599f5c3168a287fe3a35062fd2e32e0b73433fce820bfd18d28b0e3bd7a8fefde6d6f0505fbbc2d664119ab7c539269184993843289932c895847ea1ab9f04",
-                    "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.gz",
-                        "pattern": "https://ftp.gnu.org/gnu/libtool/libtool-([0-9.]+).tar.gz"
-                    }
-                }
-            ]
-        },
-        {
             "name": "libmicrohttpd",
             "buildsystem": "autotools",
             "sources": [
@@ -131,22 +115,6 @@
                         "type": "rotating-url",
                         "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.2.tar.gz",
                         "pattern": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-([0-9.]+).tar.gz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "libunistring",
-            "buildsystem": "autotools",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
-                    "sha512": "ddab67454b3b5abd3008728d1dd8220bc2b3611bb3e49b0cfda84968dfb7dd6402ca652af2cc604794fb364f2a53e77f7108fa962d2c17e46b329ddec2dd0976",
-                    "x-checker-data": {
-                        "type": "rotating-url",
-                        "url": "https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.tar.gz",
-                        "pattern": "https://ftp.gnu.org/gnu/libunistring/libunistring-([0-9.]+).tar.gz"
                     }
                 }
             ]
