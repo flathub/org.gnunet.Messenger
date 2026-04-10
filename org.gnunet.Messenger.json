@@ -77,22 +77,22 @@
         {
             "name": "libsodium",
             "buildsystem": "autotools",
-			"build-options": {
-				"arch": {
-					"aarch64": {
-						"cflags": "-march=armv8-a+crypto+aes",
-						"env": {
-							"CC": "clang",
-							"CXX": "clang++"
-						}
-					}
-				}
-			},
+            "build-options": {
+                "arch": {
+                    "aarch64": {
+                        "cflags": "-march=armv8-a+crypto+aes",
+                        "env": {
+                            "CC": "clang",
+                            "CXX": "clang++"
+                        }
+                    }
+                }
+            },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/jedisct1/libsodium/releases/download/1.0.21-RELEASE/libsodium-1.0.21.tar.gz",
-                    "sha512": "ee8cc2f3f5707b172bf75d8c04afbd5f0c83c6f94dbab3f988f07aab716d96f1662556a59e09b3d83c3bd5c22f59327ad95937bf499d523c86146f4df830f777",
+                    "url": "https://github.com/jedisct1/libsodium/releases/download/1.0.22-RELEASE/libsodium-1.0.22.tar.gz",
+                    "sha512": "8f392de781f09578d9a32000a4198e8d199ab910743017af3b3c5cae8053f745bcc885a9417fcaffb03b832400d829aef3a93c065bbb77b92598d882b6dcf187",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/jedisct1/libsodium/releases/latest",
