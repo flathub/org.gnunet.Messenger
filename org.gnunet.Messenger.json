@@ -125,8 +125,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.27.0.tar.gz",
-                    "sha512": "e5e17911f48ad2579898a7f119a1faede0ce1a437163f826d3cd02fefe0de6ce254cb514b5b2455270f6f5c474e39aea837a1a062d2ca09a4c002d4f574ac360",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/gnunet-0.28.0.tar.gz",
+                    "sha512": "5f05a9d50eda598543e6fd5b7f29ac8ba9c6dfcf8ce537210046febb9475bae9b489c2106009c349b032127f02a7b243d6f444db838af43c70fac9e75ea0cfc9",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.com/gnunet-messenger/gnunet/-/tags",
@@ -143,8 +143,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.7.0.tar.gz",
-                    "sha512": "330857bc3e38c2107d70c5ce5d729a1562593b139bc86bf883a5b397f2b33f9ea362e2b6619b35566cb2a646cfc0c5ca71478ff7161cf40410fe52666b828bba",
+                    "url": "https://ftp.gnu.org/gnu/gnunet/libgnunetchat-0.8.0.tar.gz",
+                    "sha512": "c6b0a013d29ab3effe5b92cd38ee67a8b5a2cc50f5d2569db4befe82207ae2abd9792fc5db3a665a0c94b786d86a3786199c0a73a6705710628fbc237ebc6899",
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://gitlab.com/gnunet-messenger/libgnunetchat/-/tags",
