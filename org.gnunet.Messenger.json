@@ -192,8 +192,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.93.tar.gz",
-                    "sha512": "61ac8d50c5d236f996cf60221198e3b9357329a9ecda67b29495001f59055ae0124fb1dd70c6ec075eb96eb2ef42c22604a447c9203126f9d0f8108a4e268056",
+                    "url": "https://linuxtv.org/downloads/zbar/zbar-0.23.95.tar.gz",
+                    "sha512": "34aa2bf6b3b4918e7531d2586b72a716b8a39aad783eb16fe698be5df2ffbaa379a3ee390b26631eacb5af70af00c7c8be79247177492a2b25e224068153b577",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/mchehab/zbar/releases/latest",
