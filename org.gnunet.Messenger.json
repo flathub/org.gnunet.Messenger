@@ -1,14 +1,14 @@
 {
     "app-id": "org.gnunet.Messenger",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "26.08",
+    "sdk": "org.freedesktop.Sdk",
     "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.llvm20"
+        "org.freedesktop.Sdk.Extension.llvm22"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/llvm20/bin",
-        "prepend-ld-library-path": "/usr/lib/sdk/llvm20/lib"
+        "append-path": "/usr/lib/sdk/llvm22/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/llvm22/lib"
     },
     "command": "messenger-gtk",
     "finish-args": [
@@ -229,7 +229,8 @@
                 "-Dbackend-qt5=disabled",
                 "-Dportal-tests=false",
                 "-Ddocs=false",
-                "-Dtests=false"
+                "-Dtests=false",
+                "-Dvapi=false"
             ],
             "sources": [
                 {
@@ -242,6 +243,23 @@
                         "version-pattern": "libportal-([\\d\\.]+).tar.xz",
                         "url-template": "https://github.com/flatpak/libportal/releases/download/$version/libportal-$version.tar.xz"
                     }
+                }
+            ]
+        },
+        {
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dglade_catalog=disabled",
+                "-Dvapi=false",
+                "-Dtests=false",
+                "-Dexamples=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.3.tar.xz",
+                    "sha256": "05b497229073ff557f10b326e074c5066f8743a302d4820ab97bcb5cd2dab087"
                 }
             ]
         },
