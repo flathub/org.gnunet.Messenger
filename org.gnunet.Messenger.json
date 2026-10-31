@@ -215,7 +215,7 @@
                         "type": "json",
                         "url": "https://api.github.com/repos/cisco/openh264/releases/latest",
                         "version-query": ".tag_name",
-                        "url-query": ".tag_name | sub(\"^v\"; \"https://github.com/cisco/openh264/archive/refs/tags/\") | sub(\"$\"; \".tar.gz\")"
+                        "url-query": "\"https://github.com/cisco/openh264/archive/refs/tags/\" + .tag_name + \".tar.gz\""
                     }
                 }
             ]
